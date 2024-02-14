@@ -1108,3 +1108,330 @@ Processing by AuthorsController#edit as HTML
 Completed 200 OK in 18ms (Views: 11.3ms | ActiveRecord: 0.7ms | Allocations: 2779)
 
 
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8210017815390852090)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (6.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreateBooks (20240214185148)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (31.9ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "title" character varying, "description" text, "author_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_53d51ce16a"
+FOREIGN KEY ("author_id")
+  REFERENCES "authors" ("id")
+)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE INDEX "index_books_on_author_id" ON "books" ("author_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240214185148') RETURNING "version"[0m
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(8210017815390852090)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started PUT "/__web_console/repl_sessions/19b89953bb50531b185c5e8a726acbf8" for 127.0.0.1 at 2024-02-14 17:21:21 -0300
+Started PUT "/__web_console/repl_sessions/19b89953bb50531b185c5e8a726acbf8" for 127.0.0.1 at 2024-02-14 17:21:28 -0300
+Started PUT "/__web_console/repl_sessions/19b89953bb50531b185c5e8a726acbf8" for 127.0.0.1 at 2024-02-14 17:21:29 -0300
+  [1m[36mAuthor Load (256.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+Started PUT "/__web_console/repl_sessions/19b89953bb50531b185c5e8a726acbf8" for 127.0.0.1 at 2024-02-14 17:21:32 -0300
+Started PUT "/__web_console/repl_sessions/19b89953bb50531b185c5e8a726acbf8" for 127.0.0.1 at 2024-02-14 17:21:34 -0300
+Started PUT "/__web_console/repl_sessions/19b89953bb50531b185c5e8a726acbf8" for 127.0.0.1 at 2024-02-14 17:21:35 -0300
+  [1m[36mAuthor Load (0.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/authors/new" for 127.0.0.1 at 2024-02-14 17:21:45 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 68.6ms | Allocations: 1256)
+  Rendered authors/new.html.erb within layouts/application (Duration: 76.5ms | Allocations: 1588)
+  Rendered layout layouts/application.html.erb (Duration: 210.5ms | Allocations: 17490)
+Completed 200 OK in 351ms (Views: 236.7ms | ActiveRecord: 9.3ms | Allocations: 23871)
+
+
+Started GET "/authors/new" for 127.0.0.1 at 2024-02-14 17:21:47 -0300
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 6.4ms | Allocations: 660)
+  Rendered authors/new.html.erb within layouts/application (Duration: 26.3ms | Allocations: 736)
+  Rendered layout layouts/application.html.erb (Duration: 41.6ms | Allocations: 1892)
+Completed 200 OK in 46ms (Views: 44.1ms | ActiveRecord: 0.0ms | Allocations: 2246)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2024-02-14 17:21:47 -0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/_author.html.erb (Duration: 1.9ms | Allocations: 171)
+  Rendered authors/show.html.erb within layouts/application (Duration: 13.5ms | Allocations: 1050)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 2202)
+Completed 200 OK in 29ms (Views: 17.2ms | ActiveRecord: 0.5ms | Allocations: 3965)
+
+
+Started GET "/authors/new" for 127.0.0.1 at 2024-02-14 17:21:48 -0300
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 1.7ms | Allocations: 662)
+  Rendered authors/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 737)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 1893)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 2221)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-02-14 17:21:53 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:6
+  Rendered books/index.html.erb within layouts/application (Duration: 23.4ms | Allocations: 1387)
+  Rendered layout layouts/application.html.erb (Duration: 32.9ms | Allocations: 2683)
+Completed 200 OK in 57ms (Views: 33.0ms | ActiveRecord: 1.3ms | Allocations: 6135)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2024-02-14 17:21:55 -0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 10.8ms | Allocations: 2025)
+  Rendered books/new.html.erb within layouts/application (Duration: 12.2ms | Allocations: 2337)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 3624)
+Completed 200 OK in 326ms (Views: 16.1ms | ActiveRecord: 5.6ms | Allocations: 43280)
+
+
+Started GET "/new" for 127.0.0.1 at 2024-02-14 17:27:15 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+Started GET "/books" for 127.0.0.1 at 2024-02-14 17:27:20 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (42.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:6
+  Rendered books/index.html.erb within layouts/application (Duration: 51.0ms | Allocations: 4348)
+  Rendered layout layouts/application.html.erb (Duration: 88.0ms | Allocations: 20278)
+Completed 200 OK in 104ms (Views: 42.3ms | ActiveRecord: 49.0ms | Allocations: 23677)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2024-02-14 17:27:22 -0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 6.7ms | Allocations: 2727)
+  Rendered books/new.html.erb within layouts/application (Duration: 9.5ms | Allocations: 3002)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 3077)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms | Allocations: 6171)
+
+
+  
+ActionView::Template::Error (uninitialized constant #<Class:0x00007fa2984f9d08>::Autor):
+    23: 
+    24:   <div>
+    25:     <%= form.label :autor_id %>
+    26:     <%= form.collection_select :autor_id,Autor.all, :id, :nome,prompt:"Selecione um autor" %>
+    27:   </div> 
+    28: 
+    29:   <div>
+  
+app/views/books/_form.html.erb:26
+app/views/books/_form.html.erb:1
+app/views/books/new.html.erb:3
+Started GET "/books/new" for 127.0.0.1 at 2024-02-14 17:27:52 -0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 2.2ms | Allocations: 2666)
+  Rendered books/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2971)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 3050)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 4.4ms | Allocations: 9446)
+
+
+  
+ActionView::Template::Error (uninitialized constant #<Class:0x00007fa29c5415f0>::Autor):
+    23: 
+    24:   <div>
+    25:     <%= form.label :author_id %>
+    26:     <%= form.collection_select :author_id,Autor.all, :id, :nome,prompt:"Selecione um autor" %>
+    27:   </div> 
+    28: 
+    29:   <div>
+  
+app/views/books/_form.html.erb:26
+app/views/books/_form.html.erb:1
+app/views/books/new.html.erb:3
+Started GET "/books/new" for 127.0.0.1 at 2024-02-14 17:28:13 -0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 2.5ms | Allocations: 2724)
+  Rendered books/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 3029)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 3108)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 3.1ms | Allocations: 9480)
+
+
+  
+ActionView::Template::Error (uninitialized constant #<Class:0x00007fa2a460eac0>::Autor):
+    23: 
+    24:   <div>
+    25:     <%= form.label :author_id %>
+    26:     <%= form.collection_select :author_id,Autor.all, :id, :name,prompt:"Selecione um autor" %>
+    27:   </div> 
+    28: 
+    29:   <div>
+  
+app/views/books/_form.html.erb:26
+app/views/books/_form.html.erb:1
+app/views/books/new.html.erb:3
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/books/new" for 127.0.0.1 at 2024-02-14 17:30:13 -0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 2.0ms | Allocations: 2667)
+  Rendered books/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2974)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 3053)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 2.5ms | Allocations: 9428)
+
+
+  
+ActionView::Template::Error (uninitialized constant #<Class:0x00007fa2ace1b418>::Autor):
+    23: 
+    24:   <div>
+    25:     <%= form.label :author_id %>
+    26:     <%= form.collection_select :authors_id,Autor.all, :id, :name,prompt:"Selecione um autor" %>
+    27:   </div> 
+    28: 
+    29:   <div>
+  
+app/views/books/_form.html.erb:26
+app/views/books/_form.html.erb:1
+app/views/books/new.html.erb:3
+Started GET "/books/new" for 127.0.0.1 at 2024-02-14 17:30:31 -0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/books/_form.html.erb:26
+  Rendered books/_form.html.erb (Duration: 20.2ms | Allocations: 7091)
+  Rendered books/new.html.erb within layouts/application (Duration: 20.9ms | Allocations: 7427)
+  Rendered layout layouts/application.html.erb (Duration: 37.0ms | Allocations: 23374)
+Completed 200 OK in 59ms (Views: 35.1ms | ActiveRecord: 6.8ms | Allocations: 29788)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-02-14 17:32:40 -0300
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"O Xangô de Becker Street", "description"=>"A obra comenta as aventuras do detetive sherlock holmes nas ruas de Salvador", "authors_id"=>"1"}, "commit"=>"Create Book"}
+[31mUnpermitted parameter: :authors_id. Context: { controller: BooksController, action: create, request: #<ActionDispatch::Request:0x00007fa2b0f8d2e8>, params: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"O Xangô de Becker Street", "description"=>"A obra comenta as aventuras do detetive sherlock holmes nas ruas de Salvador", "authors_id"=>"1"}, "commit"=>"Create Book", "controller"=>"books", "action"=>"create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/books/_form.html.erb:26
+  Rendered books/_form.html.erb (Duration: 4.4ms | Allocations: 2071)
+  Rendered books/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2154)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3417)
+Completed 422 Unprocessable Entity in 34ms (Views: 6.2ms | ActiveRecord: 0.4ms | Allocations: 9910)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-02-14 17:32:49 -0300
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"O Xangô de Becker Street", "description"=>"A obra comenta as aventuras do detetive sherlock holmes nas ruas de Salvador", "authors_id"=>"1"}, "commit"=>"Create Book"}
+[31mUnpermitted parameter: :authors_id. Context: { controller: BooksController, action: create, request: #<ActionDispatch::Request:0x00007fa2a41114a0>, params: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"O Xangô de Becker Street", "description"=>"A obra comenta as aventuras do detetive sherlock holmes nas ruas de Salvador", "authors_id"=>"1"}, "commit"=>"Create Book", "controller"=>"books", "action"=>"create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/books/_form.html.erb:26
+  Rendered books/_form.html.erb (Duration: 3.6ms | Allocations: 1761)
+  Rendered books/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1836)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2988)
+Completed 422 Unprocessable Entity in 8ms (Views: 5.5ms | ActiveRecord: 0.4ms | Allocations: 4422)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-02-14 17:33:05 -0300
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"O Xangô de Becker Street", "description"=>"A obra comenta as aventuras do detetive sherlock holmes nas ruas de Salvador", "authors_id"=>"1"}, "commit"=>"Create Book"}
+[31mUnpermitted parameter: :authors_id. Context: { controller: BooksController, action: create, request: #<ActionDispatch::Request:0x00007fa2a41639f8>, params: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"O Xangô de Becker Street", "description"=>"A obra comenta as aventuras do detetive sherlock holmes nas ruas de Salvador", "authors_id"=>"1"}, "commit"=>"Create Book", "controller"=>"books", "action"=>"create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/books/_form.html.erb:26
+  Rendered books/_form.html.erb (Duration: 5.7ms | Allocations: 1761)
+  Rendered books/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1836)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 2988)
+Completed 422 Unprocessable Entity in 13ms (Views: 8.2ms | ActiveRecord: 0.6ms | Allocations: 4320)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2024-02-14 17:34:13 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/books/_form.html.erb:26
+  Rendered books/_form.html.erb (Duration: 109.1ms | Allocations: 26087)
+  Rendered books/new.html.erb within layouts/application (Duration: 110.0ms | Allocations: 26572)
+  Rendered layout layouts/application.html.erb (Duration: 171.3ms | Allocations: 60668)
+Completed 200 OK in 272ms (Views: 174.3ms | ActiveRecord: 9.9ms | Allocations: 167856)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-02-14 17:34:23 -0300
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"O Xango", "description"=>"A obra comenta as aventuras do detetive sherlock holmes nas ruas de Salvador", "authors_id"=>"1"}, "commit"=>"Create Book"}
+[31mUnpermitted parameter: :authors_id. Context: { controller: BooksController, action: create, request: #<ActionDispatch::Request:0x00007f01b8069bc0>, params: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"O Xango", "description"=>"A obra comenta as aventuras do detetive sherlock holmes nas ruas de Salvador", "authors_id"=>"1"}, "commit"=>"Create Book", "controller"=>"books", "action"=>"create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/books/_form.html.erb:26
+  Rendered books/_form.html.erb (Duration: 4.9ms | Allocations: 2079)
+  Rendered books/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 2162)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 3424)
+Completed 422 Unprocessable Entity in 13ms (Views: 7.1ms | ActiveRecord: 0.5ms | Allocations: 7593)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-02-14 17:34:35 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:6
+  Rendered books/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1265)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 2437)
+Completed 200 OK in 16ms (Views: 12.1ms | ActiveRecord: 1.4ms | Allocations: 2942)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2024-02-14 17:36:57 -0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/books/_form.html.erb:26
+  Rendered books/_form.html.erb (Duration: 13.7ms | Allocations: 6374)
+  Rendered books/new.html.erb within layouts/application (Duration: 14.5ms | Allocations: 6708)
+  Rendered layout layouts/application.html.erb (Duration: 27.7ms | Allocations: 22553)
+Completed 200 OK in 41ms (Views: 26.1ms | ActiveRecord: 5.7ms | Allocations: 28960)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-02-14 17:37:15 -0300
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"O Xangô", "description"=>"A obra comenta as aventuras do detetive sherlock holmes nas ruas de Salvador", "author_id"=>"1"}, "commit"=>"Create Book"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:27:in `block in create'
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:27:in `block in create'
+  [1m[36mBook Create (3.6ms)[0m  [1m[32mINSERT INTO "books" ("title", "description", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "O Xangô"], ["description", "A obra comenta as aventuras do detetive sherlock holmes nas ruas de Salvador"], ["author_id", 1], ["created_at", "2024-02-14 20:37:15.400794"], ["updated_at", "2024-02-14 20:37:15.400794"]]
+  ↳ app/controllers/books_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/books/1
+Completed 302 Found in 25ms (ActiveRecord: 6.5ms | Allocations: 9189)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2024-02-14 17:37:15 -0300
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_book.html.erb (Duration: 1.1ms | Allocations: 288)
+  Rendered books/show.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1633)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 2898)
+Completed 200 OK in 12ms (Views: 8.0ms | ActiveRecord: 0.3ms | Allocations: 4690)
+
+
