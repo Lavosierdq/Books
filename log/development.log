@@ -1,0 +1,1110 @@
+Started GET "/" for 127.0.0.1 at 2024-02-13 22:14:57 -0300
+  
+ActiveRecord::ConnectionNotEstablished (connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: fe_sendauth: no password supplied
+):
+  
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:80:in `rescue in new_client'
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:68:in `new_client'
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:980:in `connect'
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:992:in `reconnect'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:685:in `block in reconnect!'
+activesupport (7.1.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:684:in `reconnect!'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:788:in `verify!'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:795:in `connect!'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:1001:in `block in with_raw_connection'
+activesupport (7.1.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:1000:in `with_raw_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:1113:in `valid_raw_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:616:in `get_database_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/schema_cache.rb:374:in `database_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/schema_cache.rb:70:in `database_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/schema_cache.rb:200:in `database_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:871:in `database_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:644:in `check_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:678:in `new_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:723:in `checkout_new_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:702:in `try_to_checkout_new_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:654:in `acquire_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `checkout'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:182:in `connection'
+activerecord (7.1.3) lib/active_record/migration/pending_migration_connection.rb:8:in `establish_temporary_connection'
+activerecord (7.1.3) lib/active_record/migration.rb:774:in `block in pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:773:in `each'
+activerecord (7.1.3) lib/active_record/migration.rb:773:in `pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:752:in `check_pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9) lib/rack/method_override.rb:28:in `call'
+rack (3.0.9) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE DATABASE "books_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "books_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8210017815390852090)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8210017815390852090)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2024-02-13 22:19:51 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/lavosier/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/railties-7.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/lavosier/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/railties-7.1.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.3ms | Allocations: 578)
+Completed 200 OK in 22ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 7689)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-13 22:33:22 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/lavosier/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/railties-7.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/lavosier/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/railties-7.1.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 24)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 356)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-13 22:42:45 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20240214014051_create_authors.rb
+
+
+):
+  
+activerecord (7.1.3) lib/active_record/migration.rb:755:in `check_pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3) lib/active_support/file_update_checker.rb:85:in `execute'
+activesupport (7.1.3) lib/active_support/file_update_checker.rb:95:in `execute_if_updated'
+activerecord (7.1.3) lib/active_record/migration.rb:651:in `block in call'
+activerecord (7.1.3) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9) lib/rack/method_override.rb:28:in `call'
+rack (3.0.9) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8210017815390852090)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreateAuthors (20240214014051)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (65.7ms)[0m  [1m[35mCREATE TABLE "authors" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(8210017815390852090)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8210017815390852090)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreateAuthors (20240214014051)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (15.0ms)[0m  [1m[35mCREATE TABLE "authors" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240214014051') RETURNING "version"[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8210017815390852090)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2024-02-14 00:55:25 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/lavosier/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/railties-7.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/lavosier/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/railties-7.1.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.4ms | Allocations: 481)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 1556)
+
+
+Started GET "/rails/config" for 127.0.0.1 at 2024-02-14 00:56:55 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/rails/config"):
+  
+Started GET "//authors" for 127.0.0.1 at 2024-02-14 00:57:10 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:6
+  Rendered authors/index.html.erb within layouts/application (Duration: 33.5ms | Allocations: 4333)
+  Rendered layout layouts/application.html.erb (Duration: 340.3ms | Allocations: 97433)
+Completed 200 OK in 370ms (Views: 335.2ms | ActiveRecord: 6.8ms | Allocations: 112612)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-02-14 00:57:16 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:6
+  Rendered authors/index.html.erb within layouts/application (Duration: 18.4ms | Allocations: 4066)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 5371)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.4ms | Allocations: 5744)
+
+
+Started GET "/authors/new" for 127.0.0.1 at 2024-02-14 00:57:17 -0300
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 7.1ms | Allocations: 2311)
+  Rendered authors/new.html.erb within layouts/application (Duration: 8.3ms | Allocations: 2655)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 3938)
+Completed 200 OK in 72ms (Views: 11.6ms | ActiveRecord: 21.2ms | Allocations: 66308)
+
+
+Started POST "/authors" for 127.0.0.1 at 2024-02-14 00:57:27 -0300
+Processing by AuthorsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"name"=>"Jô Soares"}, "commit"=>"Create Author"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/authors_controller.rb:27:in `block in create'
+  [1m[36mAuthor Create (2.0ms)[0m  [1m[32mINSERT INTO "authors" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Jô Soares"], ["created_at", "2024-02-14 03:57:27.449790"], ["updated_at", "2024-02-14 03:57:27.449790"]]
+  ↳ app/controllers/authors_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/authors_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/authors/1
+Completed 302 Found in 10ms (ActiveRecord: 2.8ms | Allocations: 3979)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2024-02-14 00:57:27 -0300
+Processing by AuthorsController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/_author.html.erb (Duration: 0.5ms | Allocations: 221)
+  Rendered authors/show.html.erb within layouts/application (Duration: 9.6ms | Allocations: 1638)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 2903)
+Completed 200 OK in 17ms (Views: 12.3ms | ActiveRecord: 0.5ms | Allocations: 6500)
+
+
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2024-02-14 09:30:06 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/lavosier/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/railties-7.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/lavosier/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/railties-7.1.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.0ms | Allocations: 578)
+Completed 200 OK in 12ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 7235)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-02-14 09:30:09 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (2.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:6
+  Rendered authors/_author.html.erb (Duration: 0.7ms | Allocations: 245)
+  Rendered authors/index.html.erb within layouts/application (Duration: 95.8ms | Allocations: 67101)
+  Rendered layout layouts/application.html.erb (Duration: 174.1ms | Allocations: 101050)
+Completed 200 OK in 208ms (Views: 166.0ms | ActiveRecord: 19.8ms | Allocations: 113731)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2024-02-14 09:30:11 -0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 29)
+  Rendered authors/show.html.erb within layouts/application (Duration: 6.3ms | Allocations: 3080)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 4356)
+Completed 200 OK in 26ms (Views: 8.3ms | ActiveRecord: 0.5ms | Allocations: 7658)
+
+
+Started GET "/authors/new" for 127.0.0.1 at 2024-02-14 09:30:13 -0300
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 14.8ms | Allocations: 2310)
+  Rendered authors/new.html.erb within layouts/application (Duration: 17.1ms | Allocations: 2660)
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 3941)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.0ms | Allocations: 4451)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2024-02-14 09:30:14 -0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered authors/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 554)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 1714)
+Completed 200 OK in 10ms (Views: 5.4ms | ActiveRecord: 0.5ms | Allocations: 2687)
+
+
+Started GET "/authors/new" for 127.0.0.1 at 2024-02-14 09:30:14 -0300
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 4.1ms | Allocations: 684)
+  Rendered authors/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 760)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 1916)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.0ms | Allocations: 2252)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2024-02-14 09:30:17 -0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/_author.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered authors/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 525)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 1677)
+Completed 200 OK in 16ms (Views: 10.2ms | ActiveRecord: 0.8ms | Allocations: 2524)
+
+
+Started GET "/authors/new" for 127.0.0.1 at 2024-02-14 09:30:18 -0300
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 3.5ms | Allocations: 663)
+  Rendered authors/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 738)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 1894)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 2222)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2024-02-14 09:30:19 -0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered authors/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 535)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 1687)
+Completed 200 OK in 13ms (Views: 6.5ms | ActiveRecord: 0.6ms | Allocations: 2539)
+
+
+Started GET "/authors/1/edit" for 127.0.0.1 at 2024-02-14 09:30:22 -0300
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 1.8ms | Allocations: 731)
+  Rendered authors/edit.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1039)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 2191)
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 0.2ms | Allocations: 3116)
+
+
+Started GET "/authors/new" for 127.0.0.1 at 2024-02-14 09:30:25 -0300
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 4.0ms | Allocations: 666)
+  Rendered authors/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 741)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 1897)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 2225)
+
+
+Started GET "/authors/new" for 127.0.0.1 at 2024-02-14 09:30:26 -0300
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 3.1ms | Allocations: 669)
+  Rendered authors/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 744)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 1900)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 2228)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-02-14 09:30:30 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (1.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:6
+  Rendered authors/_author.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered authors/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 989)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 2158)
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 1.1ms | Allocations: 2487)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-02-14 09:30:31 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:6
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered authors/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 949)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2118)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms | Allocations: 2445)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2024-02-14 09:30:46 -0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/_author.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered authors/show.html.erb within layouts/application (Duration: 3.6ms | Allocations: 537)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 1689)
+Completed 200 OK in 18ms (Views: 12.4ms | ActiveRecord: 0.6ms | Allocations: 2532)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2024-02-14 09:31:23 -0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/_author.html.erb (Duration: 0.3ms | Allocations: 16)
+  Rendered authors/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 535)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 1687)
+Completed 200 OK in 19ms (Views: 14.0ms | ActiveRecord: 0.5ms | Allocations: 2533)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-02-14 09:31:58 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:6
+  Rendered authors/_author.html.erb (Duration: 0.4ms | Allocations: 181)
+  Rendered authors/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 4102)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 20006)
+Completed 200 OK in 25ms (Views: 19.1ms | ActiveRecord: 3.1ms | Allocations: 22165)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-02-14 09:32:03 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:6
+  Rendered authors/_author.html.erb (Duration: 0.4ms | Allocations: 181)
+  Rendered authors/index.html.erb within layouts/application (Duration: 9.3ms | Allocations: 4042)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 19890)
+Completed 200 OK in 24ms (Views: 17.9ms | ActiveRecord: 3.7ms | Allocations: 22044)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-02-14 09:32:07 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:5
+  Rendered authors/_author.html.erb (Duration: 0.6ms | Allocations: 181)
+  Rendered authors/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 3702)
+  Rendered layout layouts/application.html.erb (Duration: 27.1ms | Allocations: 19859)
+Completed 200 OK in 30ms (Views: 23.9ms | ActiveRecord: 4.6ms | Allocations: 22013)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-02-14 09:32:12 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:6
+  Rendered authors/_author.html.erb (Duration: 0.5ms | Allocations: 181)
+  Rendered authors/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 4020)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 19868)
+Completed 200 OK in 22ms (Views: 17.7ms | ActiveRecord: 2.4ms | Allocations: 22022)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2024-02-14 09:33:05 -0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/_author.html.erb (Duration: 0.3ms | Allocations: 16)
+  Rendered authors/show.html.erb within layouts/application (Duration: 6.6ms | Allocations: 739)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 1891)
+Completed 200 OK in 22ms (Views: 13.5ms | ActiveRecord: 0.5ms | Allocations: 3517)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-02-14 09:33:21 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:6
+  Rendered authors/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 3652)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 19501)
+Completed 200 OK in 26ms (Views: 20.5ms | ActiveRecord: 3.9ms | Allocations: 21656)
+
+
+Started GET "/rails/config" for 127.0.0.1 at 2024-02-14 09:34:03 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/rails/config"):
+  
+Started GET "/authors/new" for 127.0.0.1 at 2024-02-14 09:34:13 -0300
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 2.6ms | Allocations: 1255)
+  Rendered authors/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1585)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 17545)
+Completed 200 OK in 27ms (Views: 18.9ms | ActiveRecord: 2.6ms | Allocations: 21865)
+
+
+Started GET "/id/edit" for 127.0.0.1 at 2024-02-14 09:34:39 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/id/edit"):
+  
+Started GET "/1/edit" for 127.0.0.1 at 2024-02-14 09:34:48 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/1/edit"):
+  
+Started GET "/:id/edit" for 127.0.0.1 at 2024-02-14 09:35:07 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/:id/edit"):
+  
+Started GET "/:1/edit" for 127.0.0.1 at 2024-02-14 09:35:14 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/:1/edit"):
+  
+Started GET "/" for 127.0.0.1 at 2024-02-14 09:35:19 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/lavosier/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/railties-7.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/lavosier/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/railties-7.1.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.2ms | Allocations: 478)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 1439)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-02-14 09:35:23 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:6
+  Rendered authors/_author.html.erb (Duration: 1.0ms | Allocations: 170)
+  Rendered authors/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1730)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 3025)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.5ms | Allocations: 3535)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2024-02-14 09:35:25 -0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/_author.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered authors/show.html.erb within layouts/application (Duration: 4.6ms | Allocations: 743)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 1895)
+Completed 200 OK in 21ms (Views: 12.0ms | ActiveRecord: 0.6ms | Allocations: 3502)
+
+
+Started GET "/authors/1/edit" for 127.0.0.1 at 2024-02-14 09:35:27 -0300
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 6.0ms | Allocations: 752)
+  Rendered authors/edit.html.erb within layouts/application (Duration: 8.5ms | Allocations: 1025)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 2177)
+Completed 200 OK in 23ms (Views: 15.5ms | ActiveRecord: 0.5ms | Allocations: 3077)
+
+
+Started GET "/authors/1/edit" for 127.0.0.1 at 2024-02-14 09:38:11 -0300
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 1.9ms | Allocations: 696)
+  Rendered authors/edit.html.erb within layouts/application (Duration: 2.5ms | Allocations: 798)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 1950)
+Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 0.3ms | Allocations: 2792)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2024-02-14 09:38:19 -0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/_author.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered authors/show.html.erb within layouts/application (Duration: 4.0ms | Allocations: 527)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 1679)
+Completed 200 OK in 18ms (Views: 11.7ms | ActiveRecord: 0.6ms | Allocations: 2522)
+
+
+Started GET "/authors/1/edit" for 127.0.0.1 at 2024-02-14 10:44:44 -0300
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 40.6ms | Allocations: 690)
+  Rendered authors/edit.html.erb within layouts/application (Duration: 43.1ms | Allocations: 792)
+  Rendered layout layouts/application.html.erb (Duration: 74.4ms | Allocations: 1944)
+Completed 200 OK in 256ms (Views: 80.9ms | ActiveRecord: 16.6ms | Allocations: 5799)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-14 10:44:53 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/lavosier/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/railties-7.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/lavosier/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/railties-7.1.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.0ms | Allocations: 15)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 280)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-14 10:45:44 -0300
+  
+ActionController::RoutingError (uninitialized constant PostsController):
+  
+Started GET "/" for 127.0.0.1 at 2024-02-14 10:46:14 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:6
+  Rendered authors/_author.html.erb (Duration: 0.8ms | Allocations: 181)
+  Rendered authors/index.html.erb within layouts/application (Duration: 25.6ms | Allocations: 4178)
+  Rendered layout layouts/application.html.erb (Duration: 57.3ms | Allocations: 20114)
+Completed 200 OK in 64ms (Views: 50.2ms | ActiveRecord: 10.1ms | Allocations: 22271)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2024-02-14 11:28:41 -0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/_author.html.erb (Duration: 1.0ms | Allocations: 16)
+  Rendered authors/show.html.erb within layouts/application (Duration: 35.5ms | Allocations: 749)
+  Rendered layout layouts/application.html.erb (Duration: 64.9ms | Allocations: 1901)
+Completed 200 OK in 208ms (Views: 66.5ms | ActiveRecord: 20.7ms | Allocations: 6481)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2024-02-14 11:28:43 -0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered authors/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 523)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 1675)
+Completed 200 OK in 25ms (Views: 21.6ms | ActiveRecord: 0.2ms | Allocations: 2518)
+
+
+Started GET "/authors/new" for 127.0.0.1 at 2024-02-14 11:28:44 -0300
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 30.7ms | Allocations: 1087)
+  Rendered authors/new.html.erb within layouts/application (Duration: 34.9ms | Allocations: 1374)
+  Rendered layout layouts/application.html.erb (Duration: 38.5ms | Allocations: 2530)
+Completed 200 OK in 50ms (Views: 41.6ms | ActiveRecord: 0.0ms | Allocations: 2928)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-02-14 11:28:44 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:6
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered authors/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 961)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 2130)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.6ms | Allocations: 2458)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2024-02-14 11:28:53 -0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered authors/show.html.erb within layouts/application (Duration: 3.7ms | Allocations: 529)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 1681)
+Completed 200 OK in 30ms (Views: 10.4ms | ActiveRecord: 0.7ms | Allocations: 2524)
+
+
+Started GET "/authors/1/edit" for 127.0.0.1 at 2024-02-14 11:29:03 -0300
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 7.5ms | Allocations: 696)
+  Rendered authors/edit.html.erb within layouts/application (Duration: 9.1ms | Allocations: 968)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 2120)
+Completed 200 OK in 15ms (Views: 12.0ms | ActiveRecord: 0.3ms | Allocations: 3019)
+
+
+Started GET "/rails/config" for 127.0.0.1 at 2024-02-14 11:29:40 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/rails/config"):
+  
+Started GET "/authors/1" for 127.0.0.1 at 2024-02-14 11:30:04 -0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered authors/show.html.erb within layouts/application (Duration: 7.5ms | Allocations: 531)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 1683)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.3ms | Allocations: 2525)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-02-14 11:30:04 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (1.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:6
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered authors/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 955)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 2124)
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 1.2ms | Allocations: 2451)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2024-02-14 11:30:05 -0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/_author.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered authors/show.html.erb within layouts/application (Duration: 3.7ms | Allocations: 535)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 1687)
+Completed 200 OK in 32ms (Views: 15.3ms | ActiveRecord: 0.6ms | Allocations: 2530)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-02-14 11:30:16 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:6
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered authors/index.html.erb within layouts/application (Duration: 11.6ms | Allocations: 961)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 2130)
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.8ms | Allocations: 2457)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2024-02-14 11:30:17 -0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered authors/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 549)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 1701)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.2ms | Allocations: 2544)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2024-02-14 11:30:17 -0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered authors/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 541)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 1693)
+Completed 200 OK in 16ms (Views: 6.4ms | ActiveRecord: 0.2ms | Allocations: 2536)
+
+
+Started GET "/authors/1/edit" for 127.0.0.1 at 2024-02-14 11:30:19 -0300
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 14.3ms | Allocations: 700)
+  Rendered authors/edit.html.erb within layouts/application (Duration: 15.2ms | Allocations: 802)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 1954)
+Completed 200 OK in 30ms (Views: 22.0ms | ActiveRecord: 0.5ms | Allocations: 2797)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-02-14 11:30:20 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:6
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered authors/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 965)
+  Rendered layout layouts/application.html.erb (Duration: 176.5ms | Allocations: 2135)
+Completed 200 OK in 178ms (Views: 177.0ms | ActiveRecord: 0.3ms | Allocations: 2463)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2024-02-14 11:30:23 -0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered authors/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 534)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 1687)
+Completed 200 OK in 30ms (Views: 15.4ms | ActiveRecord: 0.2ms | Allocations: 2531)
+
+
+Started GET "/authors/1/edit" for 127.0.0.1 at 2024-02-14 11:30:24 -0300
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 2.8ms | Allocations: 688)
+  Rendered authors/edit.html.erb within layouts/application (Duration: 3.6ms | Allocations: 790)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 1942)
+Completed 200 OK in 24ms (Views: 13.7ms | ActiveRecord: 0.2ms | Allocations: 2785)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-02-14 11:30:27 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (1.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:6
+  Rendered authors/_author.html.erb (Duration: 0.3ms | Allocations: 16)
+  Rendered authors/index.html.erb within layouts/application (Duration: 13.1ms | Allocations: 969)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 2139)
+Completed 200 OK in 24ms (Views: 21.2ms | ActiveRecord: 1.3ms | Allocations: 2466)
+
+
+Started GET "/authors/1/edit" for 127.0.0.1 at 2024-02-14 11:30:30 -0300
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 8.7ms | Allocations: 684)
+  Rendered authors/edit.html.erb within layouts/application (Duration: 9.7ms | Allocations: 786)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 1938)
+Completed 200 OK in 24ms (Views: 15.4ms | ActiveRecord: 0.6ms | Allocations: 2782)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2024-02-14 11:30:31 -0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered authors/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 535)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 1694)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.5ms | Allocations: 2537)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-02-14 11:30:34 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (2.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:6
+  Rendered authors/_author.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered authors/index.html.erb within layouts/application (Duration: 9.1ms | Allocations: 967)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 2136)
+Completed 200 OK in 22ms (Views: 19.1ms | ActiveRecord: 2.0ms | Allocations: 2463)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2024-02-14 11:30:47 -0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/_author.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered authors/show.html.erb within layouts/application (Duration: 3.4ms | Allocations: 523)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 1676)
+Completed 200 OK in 25ms (Views: 12.2ms | ActiveRecord: 0.5ms | Allocations: 2519)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2024-02-14 11:30:49 -0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered authors/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 537)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 1689)
+Completed 200 OK in 18ms (Views: 8.5ms | ActiveRecord: 0.5ms | Allocations: 2532)
+
+
+Started PATCH "/authors/1" for 127.0.0.1 at 2024-02-14 11:30:53 -0300
+Processing by AuthorsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"name"=>"Jô Soares"}, "commit"=>"Update Author", "id"=>"1"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+Redirected to http://127.0.0.1:3000/authors/1
+Completed 302 Found in 48ms (ActiveRecord: 0.3ms | Allocations: 1934)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2024-02-14 11:30:53 -0300
+Processing by AuthorsController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered authors/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 635)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 1892)
+Completed 200 OK in 18ms (Views: 11.0ms | ActiveRecord: 0.2ms | Allocations: 2824)
+
+
+Started GET "/authors/1/edit" for 127.0.0.1 at 2024-02-14 11:30:56 -0300
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 2.8ms | Allocations: 760)
+  Rendered authors/edit.html.erb within layouts/application (Duration: 3.5ms | Allocations: 863)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 2015)
+Completed 200 OK in 14ms (Views: 7.7ms | ActiveRecord: 0.3ms | Allocations: 2858)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-02-14 11:30:57 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (1.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:6
+  Rendered authors/_author.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered authors/index.html.erb within layouts/application (Duration: 10.0ms | Allocations: 987)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 2156)
+Completed 200 OK in 22ms (Views: 18.9ms | ActiveRecord: 1.6ms | Allocations: 2485)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2024-02-14 11:30:58 -0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/_author.html.erb (Duration: 0.3ms | Allocations: 16)
+  Rendered authors/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 527)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 1679)
+Completed 200 OK in 17ms (Views: 11.5ms | ActiveRecord: 0.5ms | Allocations: 2522)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-02-14 11:31:00 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:6
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered authors/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 963)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 2132)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.5ms | Allocations: 2460)
+
+
+Started GET "/authors/new" for 127.0.0.1 at 2024-02-14 11:31:02 -0300
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 4.9ms | Allocations: 652)
+  Rendered authors/new.html.erb within layouts/application (Duration: 8.8ms | Allocations: 727)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 1883)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.0ms | Allocations: 2215)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2024-02-14 11:31:02 -0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered authors/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 531)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 1683)
+Completed 200 OK in 13ms (Views: 9.7ms | ActiveRecord: 0.3ms | Allocations: 2526)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2024-02-14 11:31:04 -0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/_author.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered authors/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 533)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 1685)
+Completed 200 OK in 19ms (Views: 9.2ms | ActiveRecord: 0.5ms | Allocations: 2528)
+
+
+Started GET "/authors/1/edit" for 127.0.0.1 at 2024-02-14 11:31:07 -0300
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 3.8ms | Allocations: 698)
+  Rendered authors/edit.html.erb within layouts/application (Duration: 4.9ms | Allocations: 800)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 1952)
+Completed 200 OK in 17ms (Views: 11.7ms | ActiveRecord: 0.6ms | Allocations: 2795)
+
+
+Started GET "/authors/new" for 127.0.0.1 at 2024-02-14 11:31:13 -0300
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 1.5ms | Allocations: 672)
+  Rendered authors/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 747)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 1903)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 2231)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2024-02-14 11:31:14 -0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered authors/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 535)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 1687)
+Completed 200 OK in 15ms (Views: 9.0ms | ActiveRecord: 0.5ms | Allocations: 2530)
+
+
+Started GET "/authors/1/edit" for 127.0.0.1 at 2024-02-14 11:31:17 -0300
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 4.5ms | Allocations: 694)
+  Rendered authors/edit.html.erb within layouts/application (Duration: 5.6ms | Allocations: 796)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 1948)
+Completed 200 OK in 18ms (Views: 12.9ms | ActiveRecord: 0.5ms | Allocations: 2791)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2024-02-14 11:31:20 -0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/_author.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered authors/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 539)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 1691)
+Completed 200 OK in 15ms (Views: 9.6ms | ActiveRecord: 0.5ms | Allocations: 2534)
+
+
+Started GET "/authors/1/edit" for 127.0.0.1 at 2024-02-14 11:31:22 -0300
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 3.9ms | Allocations: 682)
+  Rendered authors/edit.html.erb within layouts/application (Duration: 4.9ms | Allocations: 784)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 1936)
+Completed 200 OK in 18ms (Views: 11.3ms | ActiveRecord: 0.7ms | Allocations: 2779)
+
+
