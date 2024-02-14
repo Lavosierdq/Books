@@ -1435,3 +1435,284 @@ Processing by BooksController#show as TURBO_STREAM
 Completed 200 OK in 12ms (Views: 8.0ms | ActiveRecord: 0.3ms | Allocations: 4690)
 
 
+Started GET "/" for 127.0.0.1 at 2024-02-14 17:58:54 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (31.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:6
+  Rendered authors/_author.html.erb (Duration: 0.8ms | Allocations: 182)
+  Rendered authors/index.html.erb within layouts/application (Duration: 39.5ms | Allocations: 6837)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 220)
+  Rendered layout layouts/application.html.erb (Duration: 57.1ms | Allocations: 23048)
+Completed 200 OK in 62ms (Views: 24.0ms | ActiveRecord: 34.6ms | Allocations: 26361)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-02-14 17:58:58 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (1.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:6
+  Rendered authors/_author.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered authors/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 968)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 2236)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 1.3ms | Allocations: 2583)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-02-14 17:58:59 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:6
+  Rendered books/_book.html.erb (Duration: 0.5ms | Allocations: 244)
+  Rendered books/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 4467)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 5863)
+Completed 200 OK in 12ms (Views: 8.6ms | ActiveRecord: 0.6ms | Allocations: 8289)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-02-14 17:59:00 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:6
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered authors/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 960)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2228)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.5ms | Allocations: 2561)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-02-14 17:59:01 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (1.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:6
+  Rendered authors/_author.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered authors/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 959)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 2227)
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 1.1ms | Allocations: 2554)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-02-14 17:59:02 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:6
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered authors/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 967)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2235)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms | Allocations: 2562)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-02-14 17:59:05 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:6
+  Rendered books/_book.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendered books/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 968)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 2236)
+Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 1.2ms | Allocations: 2563)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-02-14 17:59:06 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (1.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:6
+  Rendered authors/_author.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered authors/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 961)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 2229)
+Completed 200 OK in 16ms (Views: 12.7ms | ActiveRecord: 1.2ms | Allocations: 2556)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-02-14 17:59:32 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:6
+  Rendered authors/_author.html.erb (Duration: 0.5ms | Allocations: 181)
+  Rendered authors/index.html.erb within layouts/application (Duration: 13.2ms | Allocations: 4059)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 216)
+  Rendered layout layouts/application.html.erb (Duration: 30.0ms | Allocations: 20264)
+Completed 200 OK in 36ms (Views: 25.8ms | ActiveRecord: 5.9ms | Allocations: 23575)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-02-14 18:20:44 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (46.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:6
+  Rendered books/_book.html.erb (Duration: 1.4ms | Allocations: 250)
+  Rendered books/index.html.erb within layouts/application (Duration: 66.5ms | Allocations: 7863)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 215)
+  Rendered layout layouts/application.html.erb (Duration: 98.8ms | Allocations: 24170)
+Completed 200 OK in 151ms (Views: 39.8ms | ActiveRecord: 61.1ms | Allocations: 27621)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2024-02-14 18:20:46 -0300
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_book.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendered books/show.html.erb within layouts/application (Duration: 3.9ms | Allocations: 764)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 2015)
+Completed 200 OK in 20ms (Views: 9.6ms | ActiveRecord: 1.5ms | Allocations: 3677)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-02-14 18:20:52 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:6
+  Rendered books/_book.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendered books/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 967)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 2235)
+Completed 200 OK in 24ms (Views: 17.0ms | ActiveRecord: 1.2ms | Allocations: 2564)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2024-02-14 18:20:53 -0300
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  [1m[36mAuthor Load (0.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/books/_form.html.erb:26
+  Rendered books/_form.html.erb (Duration: 18.9ms | Allocations: 6111)
+  Rendered books/edit.html.erb within layouts/application (Duration: 21.4ms | Allocations: 6460)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 23.9ms | Allocations: 7830)
+Completed 200 OK in 33ms (Views: 25.1ms | ActiveRecord: 1.6ms | Allocations: 8762)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2024-02-14 18:21:07 -0300
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  [1m[36mAuthor Load (0.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/books/_form.html.erb:26
+  Rendered books/_form.html.erb (Duration: 9.5ms | Allocations: 1709)
+  Rendered books/edit.html.erb within layouts/application (Duration: 10.4ms | Allocations: 1811)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 3063)
+Completed 200 OK in 22ms (Views: 14.8ms | ActiveRecord: 1.5ms | Allocations: 3979)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2024-02-14 18:21:09 -0300
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_book.html.erb (Duration: 0.2ms | Allocations: 25)
+  Rendered books/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 556)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 1807)
+Completed 200 OK in 16ms (Views: 9.6ms | ActiveRecord: 0.7ms | Allocations: 2655)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-02-14 18:21:12 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:6
+  Rendered books/_book.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendered books/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 977)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 2245)
+Completed 200 OK in 15ms (Views: 12.4ms | ActiveRecord: 1.3ms | Allocations: 2573)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-02-14 18:21:13 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:6
+  Rendered books/_book.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered books/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 973)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 2241)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.9ms | Allocations: 2568)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-02-14 18:21:15 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:6
+  Rendered books/_book.html.erb (Duration: 0.3ms | Allocations: 21)
+  Rendered books/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 967)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 2235)
+Completed 200 OK in 23ms (Views: 19.5ms | ActiveRecord: 1.5ms | Allocations: 2562)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-02-14 18:21:16 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:6
+  Rendered authors/_author.html.erb (Duration: 0.6ms | Allocations: 172)
+  Rendered authors/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1699)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 3089)
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.8ms | Allocations: 3753)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-02-14 18:21:30 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:6
+  Rendered authors/_author.html.erb (Duration: 0.4ms | Allocations: 181)
+  Rendered authors/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 4045)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 216)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 20293)
+Completed 200 OK in 27ms (Views: 18.8ms | ActiveRecord: 3.5ms | Allocations: 23608)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-02-14 18:21:39 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (1.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:6
+  Rendered authors/_author.html.erb (Duration: 0.5ms | Allocations: 181)
+  Rendered authors/index.html.erb within layouts/application (Duration: 12.8ms | Allocations: 4035)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 213)
+  Rendered layout layouts/application.html.erb (Duration: 34.3ms | Allocations: 20232)
+Completed 200 OK in 41ms (Views: 32.6ms | ActiveRecord: 3.8ms | Allocations: 23544)
+
+
