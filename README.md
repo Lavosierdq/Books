@@ -8,8 +8,7 @@ ruby 3.0.1
 ### Database creation
 1. System Dependencies
 2. FrameWork Configuration
-3. Define SGBD and ER Model usage
-4. Create Database 
+3. Define SGBD and ER Model usage and Create Database 
 
 ### 1.Create CRUD
 
