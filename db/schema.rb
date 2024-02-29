@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_19_122742) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_29_122425) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -20,6 +20,26 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_19_122742) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["supplier_id"], name: "index_accounts_on_supplier_id"
+  end
+
+  create_table "assemblies", force: :cascade do |t|
+    t.string "assembly_reg"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "assemblies_books", id: false, force: :cascade do |t|
+    t.bigint "assembly_id", null: false
+    t.bigint "book_id", null: false
+    t.index ["assembly_id", "book_id"], name: "index_assemblies_books_on_assembly_id_and_book_id"
+    t.index ["book_id", "assembly_id"], name: "index_assemblies_books_on_book_id_and_assembly_id"
+  end
+
+  create_table "assemblies_parts", id: false, force: :cascade do |t|
+    t.bigint "assembly_id", null: false
+    t.bigint "part_id", null: false
+    t.index ["assembly_id", "part_id"], name: "index_assemblies_parts_on_assembly_id_and_part_id"
+    t.index ["part_id", "assembly_id"], name: "index_assemblies_parts_on_part_id_and_assembly_id"
   end
 
   create_table "authors", force: :cascade do |t|

@@ -3949,3 +3949,937 @@ Processing by PartsController#index as HTML
 Completed 200 OK in 16ms (Views: 13.2ms | ActiveRecord: 1.2ms | Allocations: 2467)
 
 
+Started GET "/" for 127.0.0.1 at 2024-02-28 10:57:06 -0300
+  
+ActiveRecord::NoDatabaseError (We could not find your database: books_development. Available database configurations can be found in config/database.yml.
+
+To resolve this error:
+
+- Did you not create the database, or did you delete it? To create the database, run:
+
+    bin/rails db:create
+
+- Has the database name changed? Verify that config/database.yml contains the correct database name.
+):
+  
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:74:in `rescue in new_client'
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:68:in `new_client'
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:980:in `connect'
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:992:in `reconnect'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:685:in `block in reconnect!'
+activesupport (7.1.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:684:in `reconnect!'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:788:in `verify!'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:795:in `connect!'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:1001:in `block in with_raw_connection'
+activesupport (7.1.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:1000:in `with_raw_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:1113:in `valid_raw_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:616:in `get_database_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/schema_cache.rb:374:in `database_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/schema_cache.rb:70:in `database_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/schema_cache.rb:200:in `database_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:871:in `database_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:644:in `check_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:678:in `new_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:723:in `checkout_new_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:702:in `try_to_checkout_new_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:654:in `acquire_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `checkout'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:182:in `connection'
+activerecord (7.1.3) lib/active_record/migration/pending_migration_connection.rb:8:in `establish_temporary_connection'
+activerecord (7.1.3) lib/active_record/migration.rb:774:in `block in pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:773:in `each'
+activerecord (7.1.3) lib/active_record/migration.rb:773:in `pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:752:in `check_pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9) lib/rack/method_override.rb:28:in `call'
+rack (3.0.9) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+  [1m[35m (216.3ms)[0m  [1m[35mCREATE DATABASE "books_development" ENCODING = 'unicode'[0m
+  [1m[35m (76.2ms)[0m  [1m[35mCREATE DATABASE "books_test" ENCODING = 'unicode'[0m
+  [1m[35m (18.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (14.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8210017815390852090)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-02-28 13:57:50.655098', '2024-02-28 13:57:50.655101') RETURNING "key"[0m
+Migrating to CreateAuthors (20240214014051)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (10.5ms)[0m  [1m[35mCREATE TABLE "authors" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240214014051') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBooks (20240214185148)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (13.7ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "title" character varying, "description" text, "author_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_53d51ce16a"
+FOREIGN KEY ("author_id")
+  REFERENCES "authors" ("id")
+)[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE INDEX "index_books_on_author_id" ON "books" ("author_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240214185148') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateSuppliers (20240216135331)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "suppliers" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240216135331') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAccounts (20240216135538)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (10.0ms)[0m  [1m[35mCREATE TABLE "accounts" ("id" bigserial primary key, "account_number" character varying, "supplier_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_530e87101a"
+FOREIGN KEY ("supplier_id")
+  REFERENCES "suppliers" ("id")
+)[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE INDEX "index_accounts_on_supplier_id" ON "accounts" ("supplier_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240216135538') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateParts (20240219120945)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE "parts" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240219120945') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateJoinTableSupplierPart (20240219122742)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "parts_suppliers" ("supplier_id" bigint NOT NULL, "part_id" bigint NOT NULL)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE INDEX "index_parts_suppliers_on_supplier_id_and_part_id" ON "parts_suppliers" ("supplier_id", "part_id")[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE INDEX "index_parts_suppliers_on_part_id_and_supplier_id" ON "parts_suppliers" ("part_id", "supplier_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240219122742') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8210017815390852090)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2024-02-28 10:58:12 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:6
+  Rendered authors/index.html.erb within layouts/application (Duration: 33.6ms | Allocations: 6897)
+  Rendered shared/_navbar.html.erb (Duration: 8.8ms | Allocations: 382)
+  Rendered layout layouts/application.html.erb (Duration: 327.1ms | Allocations: 100271)
+Completed 200 OK in 372ms (Views: 327.1ms | ActiveRecord: 4.6ms | Allocations: 123795)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8210017815390852090)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreateAssemblies (20240229121252)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (20.8ms)[0m  [1m[35mCREATE TABLE "assemblies" ("id" bigserial primary key, "assembly_reg" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240229121252') RETURNING "version"[0m
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateJoinTableAssemblyPart (20240229122151)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "assemblies_parts" ("assembly_id" bigint NOT NULL, "part_id" bigint NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240229122151') RETURNING "version"[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(8210017815390852090)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8210017815390852090)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateJoinTableAssemblyPart (20240229122151)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.9ms)[0m  [1m[35mDROP TABLE "assemblies_parts"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20240229122151'[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8210017815390852090)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8210017815390852090)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreateJoinTableAssemblyPart (20240229122151)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "assemblies_parts" ("assembly_id" bigint NOT NULL, "part_id" bigint NOT NULL)[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE INDEX "index_assemblies_parts_on_assembly_id_and_part_id" ON "assemblies_parts" ("assembly_id", "part_id")[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE INDEX "index_assemblies_parts_on_part_id_and_assembly_id" ON "assemblies_parts" ("part_id", "assembly_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240229122151') RETURNING "version"[0m
+  [1m[36mTRANSACTION (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8210017815390852090)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8210017815390852090)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreateJoinTableAssemblyBook (20240229122425)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "assemblies_books" ("assembly_id" bigint NOT NULL, "book_id" bigint NOT NULL)[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE INDEX "index_assemblies_books_on_assembly_id_and_book_id" ON "assemblies_books" ("assembly_id", "book_id")[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE INDEX "index_assemblies_books_on_book_id_and_assembly_id" ON "assemblies_books" ("book_id", "assembly_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240229122425') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8210017815390852090)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAssembly Create (1.6ms)[0m  [1m[32mINSERT INTO "assemblies" ("assembly_reg", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["assembly_reg", "ABC123"], ["created_at", "2024-02-29 12:28:59.173927"], ["updated_at", "2024-02-29 12:28:59.173927"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPart Load (1.4ms)[0m  [1m[34mSELECT "parts".* FROM "parts" /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPart Create (3.1ms)[0m  [1m[32mINSERT INTO "parts" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "capa dura"], ["created_at", "2024-02-29 12:30:48.825065"], ["updated_at", "2024-02-29 12:30:48.825065"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBook Load (2.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPart Create (2.0ms)[0m  [1m[32mINSERT INTO "parts" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "capa dura"], ["created_at", "2024-02-29 12:36:59.913960"], ["updated_at", "2024-02-29 12:36:59.913960"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAssembly::HABTM_Parts Create (1.3ms)[0m  [1m[32mINSERT INTO "assemblies_parts" ("assembly_id", "part_id") VALUES ($1, $2)[0m  [["assembly_id", 1], ["part_id", 2]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "assemblies_parts" ON "parts"."id" = "assemblies_parts"."part_id" WHERE "assemblies_parts"."assembly_id" = $1 /* loading for pp */ LIMIT $2[0m  [["assembly_id", 1], ["LIMIT", 11]]
+  [1m[36mPart Load (1.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "assemblies_parts" ON "parts"."id" = "assemblies_parts"."part_id" WHERE "assemblies_parts"."assembly_id" = $1 /* loading for pp */ LIMIT $2[0m  [["assembly_id", 1], ["LIMIT", 11]]
+  [1m[36mAssembly Load (0.6ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies" /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2024-02-29 09:44:43 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:6
+  Rendered authors/index.html.erb within layouts/application (Duration: 33.3ms | Allocations: 4584)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 431)
+  Rendered layout layouts/application.html.erb (Duration: 110.2ms | Allocations: 39224)
+Completed 200 OK in 151ms (Views: 109.2ms | ActiveRecord: 6.8ms | Allocations: 59552)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-02-29 09:44:44 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:6
+  Rendered authors/index.html.erb within layouts/application (Duration: 14.4ms | Allocations: 4138)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 5627)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.5ms | Allocations: 6032)
+
+
+Started GET "/assemblies" for 127.0.0.1 at 2024-02-29 09:44:45 -0300
+Processing by AssembliesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/index.html.erb within layouts/application
+  [1m[36mAssembly Load (0.6ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies"[0m
+  ↳ app/views/assemblies/index.html.erb:6
+  Rendered assemblies/_assembly.html.erb (Duration: 0.5ms | Allocations: 244)
+  Rendered assemblies/index.html.erb within layouts/application (Duration: 161.0ms | Allocations: 63446)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 163.2ms | Allocations: 64931)
+Completed 200 OK in 210ms (Views: 157.0ms | ActiveRecord: 7.1ms | Allocations: 84347)
+
+
+Started GET "/assemblies/new" for 127.0.0.1 at 2024-02-29 09:44:46 -0300
+Processing by AssembliesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/new.html.erb within layouts/application
+  Rendered assemblies/_form.html.erb (Duration: 9.5ms | Allocations: 2615)
+  Rendered assemblies/new.html.erb within layouts/application (Duration: 10.8ms | Allocations: 2927)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 4392)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.0ms | Allocations: 4882)
+
+
+Started GET "/assemblies/1" for 127.0.0.1 at 2024-02-29 09:44:46 -0300
+Processing by AssembliesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAssembly Load (1.3ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies" WHERE "assemblies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/assemblies_controller.rb:63:in `set_assembly'
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/show.html.erb within layouts/application
+  Rendered assemblies/_assembly.html.erb (Duration: 0.3ms | Allocations: 25)
+  Rendered assemblies/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 904)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 2339)
+Completed 200 OK in 33ms (Views: 16.3ms | ActiveRecord: 1.8ms | Allocations: 5639)
+
+
+Started GET "/assemblies/1" for 127.0.0.1 at 2024-02-29 09:44:51 -0300
+Processing by AssembliesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAssembly Load (0.9ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies" WHERE "assemblies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/assemblies_controller.rb:63:in `set_assembly'
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/show.html.erb within layouts/application
+  Rendered assemblies/_assembly.html.erb (Duration: 0.3ms | Allocations: 16)
+  Rendered assemblies/show.html.erb within layouts/application (Duration: 4.4ms | Allocations: 498)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 1821)
+Completed 200 OK in 21ms (Views: 13.3ms | ActiveRecord: 0.9ms | Allocations: 2677)
+
+
+Started GET "/assemblies/new" for 127.0.0.1 at 2024-02-29 09:44:54 -0300
+Processing by AssembliesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/new.html.erb within layouts/application
+  Rendered assemblies/_form.html.erb (Duration: 2.6ms | Allocations: 689)
+  Rendered assemblies/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 764)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 2091)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 2423)
+
+
+Started GET "/assemblies/1" for 127.0.0.1 at 2024-02-29 09:44:56 -0300
+Processing by AssembliesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAssembly Load (1.0ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies" WHERE "assemblies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/assemblies_controller.rb:63:in `set_assembly'
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/show.html.erb within layouts/application
+  Rendered assemblies/_assembly.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered assemblies/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 500)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 1823)
+Completed 200 OK in 17ms (Views: 9.4ms | ActiveRecord: 0.9ms | Allocations: 2669)
+
+
+Started GET "/assemblies/1/edit" for 127.0.0.1 at 2024-02-29 09:44:58 -0300
+Processing by AssembliesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAssembly Load (0.7ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies" WHERE "assemblies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/assemblies_controller.rb:63:in `set_assembly'
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/edit.html.erb within layouts/application
+  Rendered assemblies/_form.html.erb (Duration: 6.5ms | Allocations: 681)
+  Rendered assemblies/edit.html.erb within layouts/application (Duration: 10.3ms | Allocations: 954)
+  Rendered shared/_navbar.html.erb (Duration: 2.0ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 2277)
+Completed 200 OK in 33ms (Views: 25.5ms | ActiveRecord: 0.7ms | Allocations: 3187)
+
+
+Started DELETE "/assemblies/1" for 127.0.0.1 at 2024-02-29 09:44:59 -0300
+Processing by AssembliesController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mAssembly Load (0.4ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies" WHERE "assemblies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/assemblies_controller.rb:63:in `set_assembly'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/assemblies_controller.rb:52:in `destroy'
+  [1m[36mAssembly::HABTM_Books Delete All (0.5ms)[0m  [1m[31mDELETE FROM "assemblies_books" WHERE "assemblies_books"."assembly_id" = $1[0m  [["assembly_id", 1]]
+  ↳ app/controllers/assemblies_controller.rb:52:in `destroy'
+  [1m[36mAssembly::HABTM_Parts Delete All (0.5ms)[0m  [1m[31mDELETE FROM "assemblies_parts" WHERE "assemblies_parts"."assembly_id" = $1[0m  [["assembly_id", 1]]
+  ↳ app/controllers/assemblies_controller.rb:52:in `destroy'
+  [1m[36mAssembly Destroy (0.4ms)[0m  [1m[31mDELETE FROM "assemblies" WHERE "assemblies"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/assemblies_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/assemblies_controller.rb:52:in `destroy'
+Redirected to http://127.0.0.1:3000/assemblies
+Completed 302 Found in 53ms (ActiveRecord: 9.5ms | Allocations: 40045)
+
+
+Started GET "/assemblies" for 127.0.0.1 at 2024-02-29 09:44:59 -0300
+Processing by AssembliesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/index.html.erb within layouts/application
+  [1m[36mAssembly Load (0.4ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies"[0m
+  ↳ app/views/assemblies/index.html.erb:6
+  Rendered assemblies/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 918)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 2429)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.4ms | Allocations: 2851)
+
+
+Started GET "/assemblies/1" for 127.0.0.1 at 2024-02-29 09:45:01 -0300
+Processing by AssembliesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAssembly Load (0.4ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies" WHERE "assemblies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/assemblies_controller.rb:63:in `set_assembly'
+Completed 404 Not Found in 6ms (ActiveRecord: 0.4ms | Allocations: 1082)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Assembly with 'id'=1):
+  
+app/controllers/assemblies_controller.rb:63:in `set_assembly'
+Started GET "/assemblies" for 127.0.0.1 at 2024-02-29 09:45:03 -0300
+Processing by AssembliesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/index.html.erb within layouts/application
+  [1m[36mAssembly Load (0.5ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies"[0m
+  ↳ app/views/assemblies/index.html.erb:6
+  Rendered assemblies/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 973)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 117)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 2439)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.4ms | Allocations: 2807)
+
+
+Started GET "/assemblies/new" for 127.0.0.1 at 2024-02-29 09:45:04 -0300
+Processing by AssembliesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/new.html.erb within layouts/application
+  Rendered assemblies/_form.html.erb (Duration: 2.0ms | Allocations: 706)
+  Rendered assemblies/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 781)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 2108)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 2444)
+
+
+Started GET "/assemblies/new" for 127.0.0.1 at 2024-02-29 09:45:05 -0300
+Processing by AssembliesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/new.html.erb within layouts/application
+  Rendered assemblies/_form.html.erb (Duration: 2.5ms | Allocations: 636)
+  Rendered assemblies/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 711)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 2038)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 2366)
+
+
+Started GET "/assemblies/new" for 127.0.0.1 at 2024-02-29 09:45:06 -0300
+Processing by AssembliesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/new.html.erb within layouts/application
+  Rendered assemblies/_form.html.erb (Duration: 5.2ms | Allocations: 635)
+  Rendered assemblies/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 710)
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 2037)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms | Allocations: 2365)
+
+
+Started GET "/assemblies" for 127.0.0.1 at 2024-02-29 09:45:07 -0300
+Processing by AssembliesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/index.html.erb within layouts/application
+  [1m[36mAssembly Load (1.6ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies"[0m
+  ↳ app/views/assemblies/index.html.erb:6
+  Rendered assemblies/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 816)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 117)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 2157)
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 1.6ms | Allocations: 2484)
+
+
+Started POST "/assemblies" for 127.0.0.1 at 2024-02-29 09:45:08 -0300
+Processing by AssembliesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "assembly"=>{"assembly_reg"=>""}, "commit"=>"Create Assembly"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/assemblies_controller.rb:27:in `block in create'
+  [1m[36mAssembly Create (2.8ms)[0m  [1m[32mINSERT INTO "assemblies" ("assembly_reg", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["assembly_reg", ""], ["created_at", "2024-02-29 12:45:08.417714"], ["updated_at", "2024-02-29 12:45:08.417714"]]
+  ↳ app/controllers/assemblies_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/assemblies_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/assemblies/2
+Completed 302 Found in 12ms (ActiveRecord: 3.9ms | Allocations: 3674)
+
+
+Started GET "/assemblies/2" for 127.0.0.1 at 2024-02-29 09:45:08 -0300
+Processing by AssembliesController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mAssembly Load (0.2ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies" WHERE "assemblies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/assemblies_controller.rb:63:in `set_assembly'
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/show.html.erb within layouts/application
+  Rendered assemblies/_assembly.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered assemblies/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 534)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 1857)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.2ms | Allocations: 2721)
+
+
+Started GET "/assemblies" for 127.0.0.1 at 2024-02-29 09:45:09 -0300
+Processing by AssembliesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/index.html.erb within layouts/application
+  [1m[36mAssembly Load (1.1ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies"[0m
+  ↳ app/views/assemblies/index.html.erb:6
+  Rendered assemblies/_assembly.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered assemblies/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 928)
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 2268)
+Completed 200 OK in 22ms (Views: 19.8ms | ActiveRecord: 1.1ms | Allocations: 2595)
+
+
+Started GET "/assemblies/2/edit" for 127.0.0.1 at 2024-02-29 09:45:10 -0300
+Processing by AssembliesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAssembly Load (0.5ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies" WHERE "assemblies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/assemblies_controller.rb:63:in `set_assembly'
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/edit.html.erb within layouts/application
+  Rendered assemblies/_form.html.erb (Duration: 5.4ms | Allocations: 666)
+  Rendered assemblies/edit.html.erb within layouts/application (Duration: 7.7ms | Allocations: 768)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 2091)
+Completed 200 OK in 25ms (Views: 18.1ms | ActiveRecord: 0.5ms | Allocations: 2934)
+
+
+Started PATCH "/assemblies/2" for 127.0.0.1 at 2024-02-29 09:45:16 -0300
+Processing by AssembliesController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "assembly"=>{"assembly_reg"=>"1232ABC"}, "commit"=>"Update Assembly", "id"=>"2"}
+  [1m[36mAssembly Load (0.2ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies" WHERE "assemblies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/assemblies_controller.rb:63:in `set_assembly'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/assemblies_controller.rb:40:in `block in update'
+  [1m[36mAssembly Update (1.5ms)[0m  [1m[33mUPDATE "assemblies" SET "assembly_reg" = $1, "updated_at" = $2 WHERE "assemblies"."id" = $3[0m  [["assembly_reg", "1232ABC"], ["updated_at", "2024-02-29 12:45:16.634401"], ["id", 2]]
+  ↳ app/controllers/assemblies_controller.rb:40:in `block in update'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/assemblies_controller.rb:40:in `block in update'
+Redirected to http://127.0.0.1:3000/assemblies/2
+Completed 302 Found in 12ms (ActiveRecord: 3.5ms | Allocations: 3151)
+
+
+Started GET "/assemblies/2" for 127.0.0.1 at 2024-02-29 09:45:16 -0300
+Processing by AssembliesController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mAssembly Load (0.2ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies" WHERE "assemblies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/assemblies_controller.rb:63:in `set_assembly'
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/show.html.erb within layouts/application
+  Rendered assemblies/_assembly.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered assemblies/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 518)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 1841)
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.2ms | Allocations: 2687)
+
+
+Started GET "/assemblies/2/edit" for 127.0.0.1 at 2024-02-29 09:45:17 -0300
+Processing by AssembliesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAssembly Load (0.7ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies" WHERE "assemblies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/assemblies_controller.rb:63:in `set_assembly'
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/edit.html.erb within layouts/application
+  Rendered assemblies/_form.html.erb (Duration: 4.1ms | Allocations: 668)
+  Rendered assemblies/edit.html.erb within layouts/application (Duration: 5.9ms | Allocations: 770)
+  Rendered shared/_navbar.html.erb (Duration: 1.6ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 2093)
+Completed 200 OK in 26ms (Views: 19.6ms | ActiveRecord: 0.7ms | Allocations: 2936)
+
+
+Started GET "/assemblies/2" for 127.0.0.1 at 2024-02-29 09:45:19 -0300
+Processing by AssembliesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAssembly Load (0.3ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies" WHERE "assemblies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/assemblies_controller.rb:63:in `set_assembly'
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/show.html.erb within layouts/application
+  Rendered assemblies/_assembly.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered assemblies/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 502)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 1825)
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 0.3ms | Allocations: 2668)
+
+
+Started GET "/assemblies/2/edit" for 127.0.0.1 at 2024-02-29 09:45:24 -0300
+Processing by AssembliesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAssembly Load (0.5ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies" WHERE "assemblies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/assemblies_controller.rb:63:in `set_assembly'
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/edit.html.erb within layouts/application
+  Rendered assemblies/_form.html.erb (Duration: 3.8ms | Allocations: 671)
+  Rendered assemblies/edit.html.erb within layouts/application (Duration: 4.8ms | Allocations: 773)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 2097)
+Completed 200 OK in 22ms (Views: 16.3ms | ActiveRecord: 0.5ms | Allocations: 2940)
+
+
+Started GET "/assemblies/2/edit" for 127.0.0.1 at 2024-02-29 09:45:25 -0300
+Processing by AssembliesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAssembly Load (0.7ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies" WHERE "assemblies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/assemblies_controller.rb:63:in `set_assembly'
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/edit.html.erb within layouts/application
+  Rendered assemblies/_form.html.erb (Duration: 5.8ms | Allocations: 669)
+  Rendered assemblies/edit.html.erb within layouts/application (Duration: 7.0ms | Allocations: 771)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 2094)
+Completed 200 OK in 27ms (Views: 20.8ms | ActiveRecord: 0.7ms | Allocations: 2937)
+
+
+Started GET "/assemblies/2" for 127.0.0.1 at 2024-02-29 09:45:26 -0300
+Processing by AssembliesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAssembly Load (0.6ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies" WHERE "assemblies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/assemblies_controller.rb:63:in `set_assembly'
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/show.html.erb within layouts/application
+  Rendered assemblies/_assembly.html.erb (Duration: 0.3ms | Allocations: 16)
+  Rendered assemblies/show.html.erb within layouts/application (Duration: 4.6ms | Allocations: 504)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 1827)
+Completed 200 OK in 23ms (Views: 17.2ms | ActiveRecord: 0.6ms | Allocations: 2670)
+
+
+Started GET "/assemblies" for 127.0.0.1 at 2024-02-29 09:45:27 -0300
+Processing by AssembliesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/index.html.erb within layouts/application
+  [1m[36mAssembly Load (1.1ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies"[0m
+  ↳ app/views/assemblies/index.html.erb:6
+  Rendered assemblies/_assembly.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered assemblies/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 932)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 2272)
+Completed 200 OK in 13ms (Views: 10.3ms | ActiveRecord: 1.0ms | Allocations: 2599)
+
+
+Started GET "/assemblies/2" for 127.0.0.1 at 2024-02-29 09:45:30 -0300
+Processing by AssembliesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAssembly Load (0.5ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies" WHERE "assemblies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/assemblies_controller.rb:63:in `set_assembly'
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/show.html.erb within layouts/application
+  Rendered assemblies/_assembly.html.erb (Duration: 0.3ms | Allocations: 16)
+  Rendered assemblies/show.html.erb within layouts/application (Duration: 4.1ms | Allocations: 498)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 1821)
+Completed 200 OK in 21ms (Views: 14.2ms | ActiveRecord: 0.5ms | Allocations: 2664)
+
+
+Started GET "/assemblies/new" for 127.0.0.1 at 2024-02-29 09:45:30 -0300
+Processing by AssembliesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/new.html.erb within layouts/application
+  Rendered assemblies/_form.html.erb (Duration: 4.6ms | Allocations: 628)
+  Rendered assemblies/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 703)
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 2030)
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 0.0ms | Allocations: 2358)
+
+
+Started GET "/assemblies" for 127.0.0.1 at 2024-02-29 09:45:31 -0300
+Processing by AssembliesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/index.html.erb within layouts/application
+  [1m[36mAssembly Load (0.4ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies"[0m
+  ↳ app/views/assemblies/index.html.erb:6
+  Rendered assemblies/_assembly.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered assemblies/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 926)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 2266)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.4ms | Allocations: 2593)
+
+
+Started POST "/assemblies" for 127.0.0.1 at 2024-02-29 09:45:35 -0300
+Processing by AssembliesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "assembly"=>{"assembly_reg"=>""}, "commit"=>"Create Assembly"}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/assemblies_controller.rb:27:in `block in create'
+  [1m[36mAssembly Create (4.7ms)[0m  [1m[32mINSERT INTO "assemblies" ("assembly_reg", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["assembly_reg", ""], ["created_at", "2024-02-29 12:45:35.336802"], ["updated_at", "2024-02-29 12:45:35.336802"]]
+  ↳ app/controllers/assemblies_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/assemblies_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/assemblies/3
+Completed 302 Found in 22ms (ActiveRecord: 7.5ms | Allocations: 2419)
+
+
+Started GET "/assemblies/3" for 127.0.0.1 at 2024-02-29 09:45:35 -0300
+Processing by AssembliesController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mAssembly Load (0.4ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies" WHERE "assemblies"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/assemblies_controller.rb:63:in `set_assembly'
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/show.html.erb within layouts/application
+  Rendered assemblies/_assembly.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered assemblies/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 522)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 1845)
+Completed 200 OK in 11ms (Views: 6.9ms | ActiveRecord: 0.3ms | Allocations: 2691)
+
+
+Started DELETE "/assemblies/3" for 127.0.0.1 at 2024-02-29 09:45:38 -0300
+Processing by AssembliesController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"3"}
+  [1m[36mAssembly Load (1.0ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies" WHERE "assemblies"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/assemblies_controller.rb:63:in `set_assembly'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/assemblies_controller.rb:52:in `destroy'
+  [1m[36mAssembly::HABTM_Books Delete All (5.2ms)[0m  [1m[31mDELETE FROM "assemblies_books" WHERE "assemblies_books"."assembly_id" = $1[0m  [["assembly_id", 3]]
+  ↳ app/controllers/assemblies_controller.rb:52:in `destroy'
+  [1m[36mAssembly::HABTM_Parts Delete All (0.9ms)[0m  [1m[31mDELETE FROM "assemblies_parts" WHERE "assemblies_parts"."assembly_id" = $1[0m  [["assembly_id", 3]]
+  ↳ app/controllers/assemblies_controller.rb:52:in `destroy'
+  [1m[36mAssembly Destroy (0.8ms)[0m  [1m[31mDELETE FROM "assemblies" WHERE "assemblies"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/assemblies_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/assemblies_controller.rb:52:in `destroy'
+Redirected to http://127.0.0.1:3000/assemblies
+Completed 302 Found in 32ms (ActiveRecord: 8.9ms | Allocations: 3896)
+
+
+Started GET "/assemblies" for 127.0.0.1 at 2024-02-29 09:45:38 -0300
+Processing by AssembliesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/index.html.erb within layouts/application
+  [1m[36mAssembly Load (0.8ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies"[0m
+  ↳ app/views/assemblies/index.html.erb:6
+  Rendered assemblies/_assembly.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered assemblies/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 968)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 2308)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.7ms | Allocations: 2638)
+
+
+Started GET "/assemblies/3" for 127.0.0.1 at 2024-02-29 09:45:40 -0300
+Processing by AssembliesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAssembly Load (0.5ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies" WHERE "assemblies"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/assemblies_controller.rb:63:in `set_assembly'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.5ms | Allocations: 1045)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Assembly with 'id'=3):
+  
+app/controllers/assemblies_controller.rb:63:in `set_assembly'
+Started GET "/assemblies" for 127.0.0.1 at 2024-02-29 09:45:55 -0300
+Processing by AssembliesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/index.html.erb within layouts/application
+  [1m[36mAssembly Load (0.5ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies"[0m
+  ↳ app/views/assemblies/index.html.erb:6
+  Rendered assemblies/_assembly.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered assemblies/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 930)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 2277)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.5ms | Allocations: 2604)
+
+
+Started GET "/assemblies/new" for 127.0.0.1 at 2024-02-29 09:45:57 -0300
+Processing by AssembliesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/new.html.erb within layouts/application
+  Rendered assemblies/_form.html.erb (Duration: 6.3ms | Allocations: 636)
+  Rendered assemblies/new.html.erb within layouts/application (Duration: 7.1ms | Allocations: 711)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 2038)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 2366)
+
+
+Started GET "/assemblies/2" for 127.0.0.1 at 2024-02-29 09:45:59 -0300
+Processing by AssembliesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAssembly Load (0.5ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies" WHERE "assemblies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/assemblies_controller.rb:63:in `set_assembly'
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/show.html.erb within layouts/application
+  Rendered assemblies/_assembly.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered assemblies/show.html.erb within layouts/application (Duration: 4.6ms | Allocations: 500)
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 1823)
+Completed 200 OK in 24ms (Views: 16.2ms | ActiveRecord: 0.5ms | Allocations: 2666)
+
+
+Started GET "/assemblies/new" for 127.0.0.1 at 2024-02-29 09:46:03 -0300
+Processing by AssembliesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/new.html.erb within layouts/application
+  Rendered assemblies/_form.html.erb (Duration: 5.8ms | Allocations: 632)
+  Rendered assemblies/new.html.erb within layouts/application (Duration: 6.7ms | Allocations: 707)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 2034)
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.0ms | Allocations: 2362)
+
+
+Started GET "/assemblies" for 127.0.0.1 at 2024-02-29 09:46:05 -0300
+Processing by AssembliesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/index.html.erb within layouts/application
+  [1m[36mAssembly Load (1.4ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies"[0m
+  ↳ app/views/assemblies/index.html.erb:6
+  Rendered assemblies/_assembly.html.erb (Duration: 0.3ms | Allocations: 16)
+  Rendered assemblies/index.html.erb within layouts/application (Duration: 9.5ms | Allocations: 934)
+  Rendered shared/_navbar.html.erb (Duration: 1.6ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | Allocations: 2274)
+Completed 200 OK in 23ms (Views: 19.6ms | ActiveRecord: 1.3ms | Allocations: 2601)
+
+
+Started GET "/assemblies/2" for 127.0.0.1 at 2024-02-29 09:46:06 -0300
+Processing by AssembliesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAssembly Load (0.2ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies" WHERE "assemblies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/assemblies_controller.rb:63:in `set_assembly'
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/show.html.erb within layouts/application
+  Rendered assemblies/_assembly.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered assemblies/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 496)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 1819)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.2ms | Allocations: 2662)
+
+
+Started GET "/assemblies/2" for 127.0.0.1 at 2024-02-29 09:46:07 -0300
+Processing by AssembliesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAssembly Load (0.5ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies" WHERE "assemblies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/assemblies_controller.rb:63:in `set_assembly'
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/show.html.erb within layouts/application
+  Rendered assemblies/_assembly.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered assemblies/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 502)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 1825)
+Completed 200 OK in 18ms (Views: 11.9ms | ActiveRecord: 0.5ms | Allocations: 2668)
+
+
+Started GET "/assemblies/2" for 127.0.0.1 at 2024-02-29 09:46:07 -0300
+Processing by AssembliesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAssembly Load (0.5ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies" WHERE "assemblies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/assemblies_controller.rb:63:in `set_assembly'
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/show.html.erb within layouts/application
+  Rendered assemblies/_assembly.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered assemblies/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 500)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 1823)
+Completed 200 OK in 26ms (Views: 16.1ms | ActiveRecord: 0.5ms | Allocations: 2666)
+
+
+Started GET "/assemblies/2/edit" for 127.0.0.1 at 2024-02-29 09:46:09 -0300
+Processing by AssembliesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAssembly Load (0.7ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies" WHERE "assemblies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/assemblies_controller.rb:63:in `set_assembly'
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/edit.html.erb within layouts/application
+  Rendered assemblies/_form.html.erb (Duration: 5.0ms | Allocations: 669)
+  Rendered assemblies/edit.html.erb within layouts/application (Duration: 7.0ms | Allocations: 771)
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 2094)
+Completed 200 OK in 23ms (Views: 16.2ms | ActiveRecord: 0.7ms | Allocations: 2937)
+
+
+Started DELETE "/assemblies/2" for 127.0.0.1 at 2024-02-29 09:46:11 -0300
+Processing by AssembliesController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mAssembly Load (0.4ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies" WHERE "assemblies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/assemblies_controller.rb:63:in `set_assembly'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/assemblies_controller.rb:52:in `destroy'
+  [1m[36mAssembly::HABTM_Books Delete All (2.7ms)[0m  [1m[31mDELETE FROM "assemblies_books" WHERE "assemblies_books"."assembly_id" = $1[0m  [["assembly_id", 2]]
+  ↳ app/controllers/assemblies_controller.rb:52:in `destroy'
+  [1m[36mAssembly::HABTM_Parts Delete All (0.5ms)[0m  [1m[31mDELETE FROM "assemblies_parts" WHERE "assemblies_parts"."assembly_id" = $1[0m  [["assembly_id", 2]]
+  ↳ app/controllers/assemblies_controller.rb:52:in `destroy'
+  [1m[36mAssembly Destroy (0.4ms)[0m  [1m[31mDELETE FROM "assemblies" WHERE "assemblies"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/assemblies_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/assemblies_controller.rb:52:in `destroy'
+Redirected to http://127.0.0.1:3000/assemblies
+Completed 302 Found in 21ms (ActiveRecord: 6.0ms | Allocations: 3854)
+
+
+Started GET "/assemblies" for 127.0.0.1 at 2024-02-29 09:46:11 -0300
+Processing by AssembliesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/index.html.erb within layouts/application
+  [1m[36mAssembly Load (0.4ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies"[0m
+  ↳ app/views/assemblies/index.html.erb:6
+  Rendered assemblies/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 814)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 117)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 2155)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.4ms | Allocations: 2485)
+
+
+Started GET "/assemblies/new" for 127.0.0.1 at 2024-02-29 09:46:12 -0300
+Processing by AssembliesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/new.html.erb within layouts/application
+  Rendered assemblies/_form.html.erb (Duration: 3.1ms | Allocations: 636)
+  Rendered assemblies/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 711)
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 2039)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.0ms | Allocations: 2367)
+
+
+Started GET "/assemblies/new" for 127.0.0.1 at 2024-02-29 09:46:14 -0300
+Processing by AssembliesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/new.html.erb within layouts/application
+  Rendered assemblies/_form.html.erb (Duration: 3.7ms | Allocations: 626)
+  Rendered assemblies/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 701)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 2028)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.0ms | Allocations: 2356)
+
+
+Started GET "/assemblies" for 127.0.0.1 at 2024-02-29 09:46:16 -0300
+Processing by AssembliesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/index.html.erb within layouts/application
+  [1m[36mAssembly Load (1.4ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies"[0m
+  ↳ app/views/assemblies/index.html.erb:6
+  Rendered assemblies/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 810)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 117)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 2151)
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 1.4ms | Allocations: 2478)
+
+
+Started GET "/assemblies" for 127.0.0.1 at 2024-02-29 09:46:20 -0300
+Processing by AssembliesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/index.html.erb within layouts/application
+  [1m[36mAssembly Load (1.3ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies"[0m
+  ↳ app/views/assemblies/index.html.erb:6
+  Rendered assemblies/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 800)
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | Allocations: 117)
+  Rendered layout layouts/application.html.erb (Duration: 23.6ms | Allocations: 2141)
+Completed 200 OK in 28ms (Views: 24.7ms | ActiveRecord: 1.3ms | Allocations: 2468)
+
+
+Started GET "/assemblies" for 127.0.0.1 at 2024-02-29 09:46:22 -0300
+Processing by AssembliesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/index.html.erb within layouts/application
+  [1m[36mAssembly Load (1.8ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies"[0m
+  ↳ app/views/assemblies/index.html.erb:6
+  Rendered assemblies/index.html.erb within layouts/application (Duration: 9.4ms | Allocations: 795)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 117)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 2136)
+Completed 200 OK in 22ms (Views: 18.5ms | ActiveRecord: 1.7ms | Allocations: 2463)
+
+
+Started GET "/assemblies/new" for 127.0.0.1 at 2024-02-29 09:46:23 -0300
+Processing by AssembliesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering assemblies/new.html.erb within layouts/application
+  Rendered assemblies/_form.html.erb (Duration: 4.3ms | Allocations: 634)
+  Rendered assemblies/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 709)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 2039)
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.0ms | Allocations: 2367)
+
+
+  [1m[36mAssembly Load (1.2ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies" /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mAssembly Load (0.8ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies" /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mAssembly Load (0.8ms)[0m  [1m[34mSELECT "assemblies".* FROM "assemblies" /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
