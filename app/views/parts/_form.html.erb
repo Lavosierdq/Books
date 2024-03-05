@@ -17,6 +17,11 @@
   </div>
 
   <div>
+    <%= form.label :supplier_id %>
+    <%= form.collection_select :supplier_id,Supplier.all, :id, :name,prompt:"Select on supplier" %>
+  </div> 
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>
