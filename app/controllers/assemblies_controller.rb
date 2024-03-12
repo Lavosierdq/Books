@@ -37,6 +37,10 @@ class AssembliesController < ApplicationController
   # PATCH/PUT /assemblies/1 or /assemblies/1.json
   def update
     respond_to do |format|
+      unless assembly_params[:part_ids].present?
+        @assembly.parts.clear
+      end
+
       if @assembly.update(assembly_params)
         format.html { redirect_to assembly_url(@assembly), notice: "Assembly was successfully updated." }
         format.json { render :show, status: :ok, location: @assembly }
@@ -65,6 +69,6 @@ class AssembliesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def assembly_params
-      params.require(:assembly).permit(:assembly_reg)
+      params.require(:assembly).permit(:assembly_reg,part_ids:[])
     end
 end
