@@ -12,11 +12,17 @@
   <% end %>
 
   <div>
-    <%= form.label :assembly_reg, style: "display: block" %>
+    <%= form.label :assembly_reg , style: "display: block" %>
     <%= form.text_field :assembly_reg %>
+  </div>
+
+  <div >
+      <%= collection_check_boxes(:assembly, :part_ids, Part.all, :id, :name) %>
   </div>
 
   <div>
     <%= form.submit %>
   </div>
+
+
 <% end %>
