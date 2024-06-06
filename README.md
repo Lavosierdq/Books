@@ -28,7 +28,7 @@ ruby 3.0.1
 
 ### 3.Rules
 #### To alter
-  1. add field in cnpj
+  1. add field cnpj in Suppliers
   2. Add Checker Digit Field to Account
   3. Add ISBN Field in Book
   4. Add CPF Field in Author
