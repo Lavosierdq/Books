@@ -61,6 +61,7 @@ class AssembliesController < ApplicationController
     end
   end
 
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_assembly
@@ -69,6 +70,6 @@ class AssembliesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def assembly_params
-      params.require(:assembly).permit(:assembly_reg,part_ids:[])
+      params.require(:assembly).permit(:assembly_reg, part_ids:[], book_ids:[])
     end
 end

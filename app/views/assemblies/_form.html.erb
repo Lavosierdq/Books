@@ -1,8 +1,8 @@
+<h6> verificando aqui </h6>
 <%= form_with(model: assembly) do |form| %>
   <% if assembly.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(assembly.errors.count, "error") %> prohibited this assembly from being saved:</h2>
-
       <ul>
         <% assembly.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -10,19 +10,17 @@
       </ul>
     </div>
   <% end %>
-
   <div>
     <%= form.label :assembly_reg , style: "display: block" %>
     <%= form.text_field :assembly_reg %>
   </div>
-
   <div >
-      <%= collection_check_boxes(:assembly, :part_ids, Part.all, :id, :name) %>
+    <%= collection_check_boxes(:assembly, :part_ids, Part.all, :id, :name) %>
   </div>
-
+  <div>
+    <%= collection_check_boxes(:assembly, :book_ids, Book.all, :id, :title) %>
+  </div>
   <div>
     <%= form.submit %>
   </div>
-
-
 <% end %>
