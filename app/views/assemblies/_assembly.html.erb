@@ -3,21 +3,32 @@
     <strong>Assembly reg:</strong>
     <%= assembly.assembly_reg %>
   </p>
-
   <strong>
-     Parts:
+    Parts:
   </strong>
-
   <%if assembly.parts.any?%>
     <ul>
       <%assembly.parts.each do |part| %>
         <div>
-           <li><%=part.name%></li>
+          nome da parte
+          <li><%=part.name%></li>
         </div>
       <% end %>
     </ul>
-    <% else %>
-        <p>This assembly has no parts.</p>
-    <%end%>
-
+  <% else %>
+    <p>This assembly has no parts.</p>
+  <%end%>
+  <!-- -------------------------- -->
+  <strong>Books:</strong>
+  <% if assembly.books.any? %>
+    <ul>
+      <% assembly.books.each do |book| %>
+        <div>
+          <li><%= book.title %></li>
+        </div>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>This assembly has no books.</p>
+  <% end %>
 </div>
